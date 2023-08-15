@@ -58,8 +58,11 @@ dependencies {
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("com.google.android.material:material:1.9.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
+    implementation ("androidx.compose.material:material:1.5.0")
+
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
@@ -81,7 +84,9 @@ dependencies {
 
     //hilt
     implementation("com.google.dagger:hilt-android:2.46")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
     //coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
    //compose
@@ -90,4 +95,6 @@ dependencies {
     //navigation in compose
     val navigationVersion = "2.7.0"
     implementation("androidx.navigation:navigation-compose:$navigationVersion")
+    implementation( "androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+
 }
