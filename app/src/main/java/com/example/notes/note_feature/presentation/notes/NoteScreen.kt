@@ -38,6 +38,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.notes.note_feature.presentation.notes.components.NoteItem
 import com.example.notes.note_feature.presentation.notes.components.OrderSection
+import com.example.notes.note_feature.presentation.utils.Screen
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -110,7 +111,7 @@ fun NoteScreen(
                     NoteItem(note = note, modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            //navigate
+                            navController.navigate(Screen.AddEditNoteScreen.route)
                         }, onDeleteClick = {
                         noteViewModel.onEvent(NotesEvent.DeleteNote(note))
                         scope.launch {
