@@ -84,7 +84,6 @@ dependencies {
 
     //hilt
     implementation("com.google.dagger:hilt-android:2.46")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     //coroutine
