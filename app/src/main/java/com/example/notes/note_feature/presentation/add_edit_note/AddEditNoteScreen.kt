@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.LightGray
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -70,12 +71,11 @@ fun AddEditNoteScreen(
                 onClick = {
                     viewModel.onEvent(AddEditNoteEvent.SaveNote)
                 },
-                backgroundColor = MaterialTheme.colors.primary
+                backgroundColor = LightGray
             ) {
                 Icon(imageVector = Icons.Default.Save, contentDescription = "Save note")
             }
-        },
-        scaffoldState = scaffoldState
+        }, scaffoldState = scaffoldState
     ) {
         Column(
             modifier = Modifier
